@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="راهنمای ساده مدیریت و به‌روزرسانی پایگاه رسمی خادم‌الشهداء سید مهدی رضا موسوی.">
+  <title>راهنمای مدیریت سایت | پایگاه رسمی</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style-آقاسید.css">
+</head>
+<body class="guide-page">
+<header class="site-header"><div class="masthead wrap"><a class="identity" href="index.html"><span class="identity-mark">م</span><span class="identity-copy"><strong>خادم‌الشهداء سید مهدی رضا موسوی</strong><small>راهنمای مدیریت پایگاه</small></span></a><a class="contact-short" href="index.html">بازگشت به سایت ←</a></div></header>
+<main class="wrap guide-main">
+  <span class="section-kicker">راهنمای مدیر سایت</span><h1>مدیریت ساده محتوا با گوشی</h1>
+  <p>این نسخه با میزبانی ایستا و رایگان GitHub Pages ساخته شده است. برای انتشار خبر و یادداشت، نیازی به نصب نرم‌افزار یا خرید افزونه ندارید؛ فایل محتوای سایت را از داخل GitHub ویرایش می‌کنید.</p>
+  <div class="guide-note"><strong>نکته مهم:</strong> این سایت پنل مدیریت خصوصی و پایگاه داده ندارد. تغییراتی که در GitHub ثبت می‌کنید پس از انتشار به همه بازدیدکنندگان نمایش داده می‌شود. اطلاعات ورود GitHub را محرمانه نگه دارید.</div>
+  <h2>افزودن خبر یا یادداشت</h2>
+  <ol>
+    <li>وارد حساب GitHub شوید و مخزن سایت خود را باز کنید.</li>
+    <li>فایل <code>مطالب-آقاسید.json</code> را انتخاب کنید.</li>
+    <li>روی آیکون مداد یا گزینه ویرایش بزنید.</li>
+    <li>یک مطلب تازه به آرایه <code>posts</code> اضافه کنید؛ نمونه زیر را کپی و متن آن را جایگزین کنید.</li>
+    <li>در پایان گزینه <strong>Commit changes</strong> را بزنید تا تغییرات ذخیره و برای انتشار ارسال شوند.</li>
+  </ol>
+  <pre dir="ltr"><code>{
+  "posts": [
+    {
+      "title": "عنوان خبر یا یادداشت",
+      "category": "اخبار",
+      "date": "۱۴۰۵/۰۸/۲۵",
+      "summary": "خلاصه کوتاه مطلب در این قسمت نوشته می‌شود.",
+      "url": ""
+    }
+  ]
+}</code></pre>
+  <h2>ویرایش بخش‌های ثابت سایت</h2>
+  <p>برای تغییر عنوان‌ها، معرفی بخش‌ها، متن صفحه نخست یا اطلاعات مجموعه‌ها، فایل <code>index.html</code> را در GitHub باز و ویرایش کنید. برای تغییر رنگ‌ها و ظاهر، فایل <code>style.css</code> استفاده می‌شود.</p>
+  <h2>تعویض تصویر پروفایل</h2>
+  <p>تصویر جدید را با نام <code>تصویر-آقاسید.svg</code> در پوشه <code>assets</code> بارگذاری کنید و نسخه قبلی را جایگزین کنید. بهتر است تصویر افقی یا عمودی با کیفیت مناسب و حجم بهینه باشد.</p>
+  <h2>انتشار تغییرات</h2>
+  <p>پس از ثبت هر تغییر در مخزن، GitHub Pages معمولاً به‌صورت خودکار سایت را به‌روزرسانی می‌کند. ممکن است چند دقیقه طول بکشد. در صورت مشاهده نسخه قبلی، صفحه را دوباره بارگذاری کنید.</p>
+  <a class="solid-btn" href="index.html">بازگشت به صفحه نخست <span>←</span></a>
+</main>
+<footer class="site-footer"><div class="wrap footer-bottom"><span>راهنمای مدیریت پایگاه رسمی</span><span>میزبانی ایستا · GitHub Pages</span></div></footer>
+</body></html>

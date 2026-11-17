@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mahdirezamousavi.github.io/sitemap-آقاسید.xml
