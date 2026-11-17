@@ -2,114 +2,1108 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#101b2d">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07150f">
+<meta name="description" content="پایگاه رسمی سید مهدی رضا موسوی؛ اخبار، آثار، سخنرانی‌ها و فعالیت‌های فرهنگی و جهادی.">
+<meta name="author" content="سید مهدی رضا موسوی">
+<title>سید مهدی رضا موسوی | پایگاه رسمی</title>
 
-  <title>مهدی رضا موسوی | آقاسید</title>
+<style>
+:root {
+  --bg: #080d0b;
+  --panel: #101a15;
+  --panel2: #14251c;
+  --green: #145c39;
+  --green2: #1e7549;
+  --gold: #c8a45b;
+  --white: #f5f2e9;
+  --muted: #aaa99f;
+  --line: rgba(200,164,91,.25);
+}
 
-  <meta name="description" content="پایگاه رسمی مهدی رضا موسوی؛ اخبار، فعالیت‌ها، دیدگاه‌ها و آثار">
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  <link rel="icon" href="تصویر-آقاسید.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style-آقاسید.css">
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
 
+body {
+  background-color: var(--bg);
+  color: var(--white);
+  font-family: Tahoma, "Segoe UI", sans-serif;
+  line-height: 2;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.container {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+
+/* نقش هندسی پس زمینه */
+
+.pattern {
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(45deg, transparent 46%, rgba(200,164,91,.045) 47%, rgba(200,164,91,.045) 49%, transparent 50%),
+    linear-gradient(-45deg, transparent 46%, rgba(200,164,91,.045) 47%, rgba(200,164,91,.045) 49%, transparent 50%);
+  background-size: 55px 55px;
+}
+
+/* نوار بالایی */
+
+.topbar {
+  background: #155c37;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  font-size: 12px;
+  color: #fff;
+}
+
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+}
+
+.topbar-right {
+  display: flex;
+  gap: 15px;
+}
+
+/* سربرگ */
+
+.site-header {
+  background: rgba(5,10,8,.97);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+
+.header-main {
+  min-height: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.brand-symbol {
+  width: 75px;
+  height: 75px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  font-size: 31px;
+  background: linear-gradient(145deg,#183b28,#07130d);
+  box-shadow: 0 0 25px rgba(200,164,91,.12);
+}
+
+.brand-title {
+  font-size: clamp(20px, 3vw, 31px);
+  font-weight: bold;
+  color: var(--gold);
+  line-height: 1.7;
+}
+
+.brand-subtitle {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.icon-button {
+  width: 43px;
+  height: 43px;
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 22px;
+}
+
+.icon-button:hover {
+  background: var(--green);
+}
+
+/* منوی اصلی */
+
+.navbar {
+  border-top: 1px solid rgba(255,255,255,.07);
+  background: #0b1510;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  display: block;
+  padding: 13px 17px;
+  color: #e8e5dc;
+  font-size: 14px;
+  transition: .2s;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+  background: rgba(200,164,91,.08);
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* جستجو */
+
+.search-box {
+  display: none;
+  padding: 15px 0;
+  border-top: 1px solid var(--line);
+}
+
+.search-box.active {
+  display: block;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 13px 16px;
+  background: #142019;
+  color: white;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  outline: none;
+}
+
+/* بنر اصلی */
+
+.hero {
+  min-height: 510px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 80% 40%, rgba(25,100,59,.28), transparent 48%),
+    linear-gradient(110deg,#07100c,#10251a 55%,#07100c);
+  border-bottom: 2px solid var(--gold);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .2;
+  background-image:
+    repeating-linear-gradient(45deg, transparent 0 28px, rgba(200,164,91,.12) 29px 30px),
+    repeating-linear-gradient(-45deg, transparent 0 28px, rgba(200,164,91,.12) 29px 30px);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+  padding: 70px 0;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 6vw, 57px);
+  margin: 12px 0;
+  line-height: 1.7;
+}
+
+.hero h2 {
+  font-size: clamp(17px, 3vw, 23px);
+  color: var(--gold);
+  font-weight: normal;
+}
+
+.hero p {
+  color: #d0d0c7;
+  max-width: 600px;
+  margin: 20px 0 28px;
+  font-size: 16px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 11px 24px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: .2s;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: #10140f;
+}
+
+.btn-outline {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* نوار پرچم */
+
+.flag-strip {
+  display: flex;
+  height: 8px;
+  direction: ltr;
+}
+
+.flag-strip span {
+  flex: 1;
+}
+
+.flag-green { background: #23934b; }
+.flag-white { background: #fff; }
+.flag-red { background: #d52b35; }
+
+/* تیتر بخش ها */
+
+.section {
+  padding: 75px 0;
+}
+
+.section-heading {
+  margin-bottom: 35px;
+  border-right: 4px solid var(--gold);
+  padding-right: 17px;
+}
+
+.section-heading h2 {
+  font-size: 26px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.section-dark {
+  background: rgba(15,27,20,.86);
+}
+
+/* کارت ها */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+}
+
+.card {
+  background: linear-gradient(145deg,#14251b,#0b130e);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 35px rgba(0,0,0,.3);
+}
+
+.card-image {
+  height: 175px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle,rgba(200,164,91,.17),transparent 65%),
+    #101d15;
+  color: var(--gold);
+  font-size: 43px;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 9px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--gold);
+  font-size: 13px;
+}
+
+/* معرفی */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.profile-frame {
+  min-height: 310px;
+  border: 1px solid var(--gold);
+  background:
+    radial-gradient(circle,rgba(200,164,91,.12),transparent 65%),
+    #101b14;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 25px;
+  color: var(--gold);
+  font-size: 16px;
+}
+
+.profile-frame strong {
+  display: block;
+  font-size: 55px;
+}
+
+.about-text p {
+  color: #c9c9c0;
+  margin: 15px 0;
+  font-size: 15px;
+}
+
+/* سه تصویر */
+
+.leaders-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+}
+
+.leader-box {
+  border: 1px solid var(--line);
+  background: #111c15;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.leader-placeholder {
+  height: 230px;
+  background: linear-gradient(145deg,#203b2b,#0a110d);
+  border: 1px solid rgba(200,164,91,.2);
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.leader-box h3 {
+  font-size: 15px;
+}
+
+/* نوار اخبار */
+
+.news-list {
+  display: grid;
+  gap: 13px;
+}
+
+.news-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 17px 20px;
+  background: #111b15;
+  border-right: 3px solid var(--gold);
+}
+
+.news-item span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* پرچم */
+
+.iran-flag {
+  max-width: 360px;
+  margin: 30px auto 0;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px #000;
+}
+
+.iran-flag div {
+  height: 35px;
+}
+
+.iran-flag .g { background: #23934b; }
+.iran-flag .w {
+  background: #fff;
+  display: grid;
+  place-items: center;
+  color: #d52b35;
+  font-size: 20px;
+  line-height: 1;
+}
+.iran-flag .r { background: #d52b35; }
+
+/* تماس */
+
+.contact-panel {
+  background: linear-gradient(120deg,#143a27,#0c1911);
+  border: 1px solid var(--line);
+  padding: 30px;
+  border-radius: 9px;
+  text-align: center;
+}
+
+.contact-panel p {
+  color: #d3d3ca;
+  margin: 12px 0;
+}
+
+/* پاورقی */
+
+.site-footer {
+  background: #050907;
+  border-top: 2px solid var(--gold);
+  padding: 45px 0 20px;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 30px;
+  padding-bottom: 30px;
+}
+
+.footer-main h3 {
+  color: var(--gold);
+  margin-bottom: 12px;
+  font-size: 17px;
+}
+
+.footer-main p,
+.footer-main a {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  margin: 7px 0;
+}
+
+.footer-main a:hover {
+  color: var(--gold);
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding-top: 18px;
+  color: #888;
+  font-size: 12px;
+}
+
+/* منوی موبایل */
+
+.mobile-menu-panel {
+  display: none;
+  background: #08110b;
+  border-top: 1px solid var(--line);
+}
+
+.mobile-menu-panel.open {
+  display: block;
+}
+
+.mobile-menu-panel a {
+  display: block;
+  padding: 13px 5%;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.mobile-menu-panel a:hover {
+  color: var(--gold);
+  background: #14251b;
+}
+
+@media (max-width: 800px) {
+  .header-main {
+    min-height: 95px;
+  }
+
+  .brand-symbol {
+    width: 58px;
+    height: 58px;
+    font-size: 25px;
+  }
+
+  .brand-subtitle {
+    font-size: 10px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+    margin: 10px 0;
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 22px;
+  }
+
+  .navbar .container {
+    justify-content: flex-start;
+  }
+
+  .hero {
+    min-height: 460px;
+  }
+
+  .hero-content {
+    padding: 55px 0;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-frame {
+    min-height: 220px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .topbar .container {
+    font-size: 10px;
+  }
+
+  .brand-title {
+    font-size: 19px;
+  }
+
+  .brand-symbol {
+    width: 49px;
+    height: 49px;
+    font-size: 21px;
+  }
+
+  .header-actions {
+    gap: 5px;
+  }
+
+  .icon-button {
+    width: 37px;
+    height: 37px;
+  }
+
+  .hero {
+    min-height: 420px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 52px 0;
+  }
+
+  .section-heading h2 {
+    font-size: 22px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .leaders-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .leader-placeholder {
+    height: 250px;
+  }
+
+  .news-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 
-<body>
+<body class="pattern">
 
-  <header class="site-header">
-    <div class="container">
-
-      <a href="./" class="brand">
-        <img src="تصویر-آقاسید.svg" alt="نشان آقاسید">
-        <span>پایگاه رسمی آقاسید</span>
-      </a>
-
-      <nav class="main-nav" aria-label="ناوبری اصلی">
-        <a href="#home">صفحه اصلی</a>
-        <a href="#about">درباره من</a>
-        <a href="#activities">فعالیت‌ها</a>
-        <a href="#news">اخبار و مطالب</a>
-        <a href="#contact">ارتباط</a>
-      </nav>
-
+<div class="topbar">
+  <div class="container">
+    <span>پایگاه رسمی سید مهدی رضا موسوی</span>
+    <div class="topbar-right">
+      <span>فرهنگی | اجتماعی | جهادی</span>
+      <span>۱۴۰۵</span>
     </div>
-  </header>
+  </div>
+</div>
 
-  <main>
+<header class="site-header">
+  <div class="container header-main">
 
-    <section id="home" class="hero">
-      <div class="container">
-
-        <div class="hero-content">
-          <span class="eyebrow">پایگاه رسمی</span>
-
-          <h1>مهدی رضا موسوی</h1>
-
-          <h2>آقاسید</h2>
-
-          <p>
-            پایگاه رسمی انتشار اخبار، فعالیت‌ها،
-            دیدگاه‌ها و آثار مهدی رضا موسوی
-          </p>
-
-          <a href="#about" class="primary-button">
-            بیشتر آشنا شوید
-          </a>
-        </div>
-
+    <a href="#home" class="brand">
+      <div class="brand-symbol">سـ</div>
+      <div>
+        <div class="brand-title">سید مهدی رضا موسوی</div>
+        <div class="brand-subtitle">پایگاه رسمی اطلاع‌رسانی و ارتباطات</div>
       </div>
-    </section>
+    </a>
 
-    <section id="about" class="content-section">
-      <div class="container">
-        <h2>درباره من</h2>
-        <p>
-          به پایگاه رسمی مهدی رضا موسوی خوش آمدید.
-          در این بخش اطلاعات و معرفی رسمی منتشر خواهد شد.
-        </p>
-      </div>
-    </section>
+    <div class="header-actions">
+      <button class="icon-button" id="searchToggle" aria-label="جستجو">⌕</button>
+      <button class="icon-button mobile-menu" id="menuToggle" aria-label="باز کردن منو">☰</button>
+    </div>
 
-    <section id="activities" class="content-section">
-      <div class="container">
-        <h2>فعالیت‌ها</h2>
-        <p>
-          گزارش فعالیت‌ها، برنامه‌ها و اقدامات فرهنگی و جهادی.
-        </p>
-      </div>
-    </section>
+  </div>
 
-    <section id="news" class="content-section">
-      <div class="container">
-        <h2>اخبار و مطالب</h2>
-        <p>
-          تازه‌ترین اخبار، یادداشت‌ها و مطالب منتشرشده.
-        </p>
-      </div>
-    </section>
-
-    <section id="contact" class="content-section">
-      <div class="container">
-        <h2>ارتباط با ما</h2>
-        <p>
-          راه‌های ارتباطی رسمی در این بخش قرار خواهند گرفت.
-        </p>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
+  <nav class="navbar">
     <div class="container">
+      <ul class="nav-links">
+        <li><a href="#home">صفحه اصلی</a></li>
+        <li><a href="#about">زندگی‌نامه</a></li>
+        <li><a href="#works">تألیفات و آثار</a></li>
+        <li><a href="#speeches">سخنرانی‌ها</a></li>
+        <li><a href="#news">اخبار و یادداشت‌ها</a></li>
+        <li><a href="#salehoon">قرارگاه صالحون</a></li>
+        <li><a href="#media">رسانه</a></li>
+        <li><a href="#contact">ارتباط با ما</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="mobile-menu-panel" id="mobilePanel">
+    <a href="#home">صفحه اصلی</a>
+    <a href="#about">زندگی‌نامه</a>
+    <a href="#works">تألیفات و آثار</a>
+    <a href="#speeches">سخنرانی‌ها</a>
+    <a href="#news">اخبار و یادداشت‌ها</a>
+    <a href="#salehoon">قرارگاه فرهنگی جهادی صالحون</a>
+    <a href="#media">گالری تصاویر و رسانه</a>
+    <a href="#contact">ارتباط با ما</a>
+  </div>
+
+  <div class="search-box" id="searchBox">
+    <div class="container">
+      <input type="search" id="siteSearch" placeholder="عبارت موردنظر را جست‌وجو کنید...">
+    </div>
+  </div>
+</header>
+
+<div class="flag-strip">
+  <span class="flag-green"></span>
+  <span class="flag-white"></span>
+  <span class="flag-red"></span>
+</div>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">پایگاه رسمی</span>
+      <h1>سید مهدی رضا موسوی</h1>
+      <h2>اندیشه، فرهنگ و حرکت جهادی</h2>
       <p>
-        تمامی حقوق این پایگاه متعلق به مهدی رضا موسوی است.
+        درگاه رسمی انتشار اخبار، دیدگاه‌ها، فعالیت‌ها،
+        سخنرانی‌ها و آثار سید مهدی رضا موسوی.
       </p>
-      <p>© ۱۴۰۵</p>
+      <div class="hero-buttons">
+        <a href="#about" class="btn btn-gold">آشنایی با من</a>
+        <a href="#news" class="btn btn-outline">آخرین اخبار</a>
+      </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="script-آقاسید.js" defer></script>
+<section class="section section-dark" id="about">
+  <div class="container">
+    <div class="section-heading">
+      <h2>زندگی‌نامه و معرفی</h2>
+      <p>آشنایی با سوابق، اندیشه‌ها و فعالیت‌ها</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="profile-frame">
+        <div>
+          <strong>سـ</strong>
+          تصویر رسمی سید مهدی رضا موسوی
+        </div>
+      </div>
+
+      <div class="about-text">
+        <h2>سید مهدی رضا موسوی</h2>
+        <p>
+          این پایگاه با هدف معرفی فعالیت‌ها، انتشار اخبار،
+          ارائه دیدگاه‌ها و دسترسی به آثار و برنامه‌های رسمی
+          راه‌اندازی شده است.
+        </p>
+        <p>
+          اطلاعات تکمیلی زندگی‌نامه، سوابق علمی، فرهنگی و
+          اجرایی پس از تأیید و تکمیل در این بخش منتشر خواهد شد.
+        </p>
+        <a href="#contact" class="btn btn-outline">ارتباط با پایگاه</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="works">
+  <div class="container">
+    <div class="section-heading">
+      <h2>تألیفات و آثار</h2>
+      <p>کتاب‌ها، پژوهش‌ها و آثار مکتوب</p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="card-image">📚</div>
+        <div class="card-content">
+          <h3>کتاب‌ها و تألیفات</h3>
+          <p>معرفی آثار مکتوب و کتاب‌های منتشرشده.</p>
+          <a href="#contact" class="card-link">مشاهده آثار ←</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">✒</div>
+        <div class="card-content">
+          <h3>یادداشت‌ها و مقالات</h3>
+          <p>مقالات، یادداشت‌ها و نوشته‌های تخصصی.</p>
+          <a href="#news" class="card-link">مطالعه مطالب ←</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">◎</div>
+        <div class="card-content">
+          <h3>پژوهش‌ها</h3>
+          <p>معرفی فعالیت‌های علمی و پژوهشی.</p>
+          <a href="#contact" class="card-link">اطلاعات بیشتر ←</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="speeches">
+  <div class="container">
+    <div class="section-heading">
+      <h2>سخنرانی‌ها و دیدگاه‌ها</h2>
+      <p>بیانات، نشست‌ها و محتوای فکری و فرهنگی</p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="card-image">🎙</div>
+        <div class="card-content">
+          <h3>سخنرانی‌ها</h3>
+          <p>آرشیو سخنرانی‌ها و نشست‌های رسمی.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">◉</div>
+        <div class="card-content">
+          <h3>دیدگاه‌ها</h3>
+          <p>دیدگاه‌ها و مواضع منتشرشده.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">▤</div>
+        <div class="card-content">
+          <h3>گفت‌وگوها</h3>
+          <p>مصاحبه‌ها و گفت‌وگوهای رسانه‌ای.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="news">
+  <div class="container">
+    <div class="section-heading">
+      <h2>آخرین اخبار و مطالب</h2>
+      <p>تازه‌ترین اخبار، گزارش‌ها و یادداشت‌ها</p>
+    </div>
+
+    <div class="news-list">
+      <div class="news-item">
+        <strong>اخبار و گزارش‌های رسمی در این بخش منتشر خواهد شد.</strong>
+        <span>پایگاه اطلاع‌رسانی</span>
+      </div>
+      <div class="news-item">
+        <strong>یادداشت‌ها و مطالب جدید در این قسمت قرار می‌گیرند.</strong>
+        <span>بخش یادداشت‌ها</span>
+      </div>
+      <div class="news-item">
+        <strong>گزارش برنامه‌ها و فعالیت‌های فرهنگی و جهادی.</strong>
+        <span>بخش گزارش‌ها</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="salehoon">
+  <div class="container">
+    <div class="section-heading">
+      <h2>قرارگاه فرهنگی جهادی صالحون</h2>
+      <p>معرفی فعالیت‌ها و برنامه‌های قرارگاه</p>
+    </div>
+
+    <div class="contact-panel">
+      <h2>قرارگاه فرهنگی جهادی صالحون</h2>
+      <p>
+        اخبار، گزارش‌ها، برنامه‌ها و فعالیت‌های فرهنگی،
+        اجتماعی و جهادی قرارگاه در این بخش معرفی خواهد شد.
+      </p>
+      <a href="#contact" class="btn btn-gold">اطلاعات بیشتر</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="media">
+  <div class="container">
+    <div class="section-heading">
+      <h2>گالری تصاویر و رسانه</h2>
+      <p>تصاویر، ویدئوها و آرشیو رسانه‌ای</p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="card-image">▧</div>
+        <div class="card-content">
+          <h3>گالری تصاویر</h3>
+          <p>تصاویر برنامه‌ها و فعالیت‌ها.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">▶</div>
+        <div class="card-content">
+          <h3>گالری ویدئو</h3>
+          <p>ویدئوها و محتوای تصویری.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">♫</div>
+        <div class="card-content">
+          <h3>آرشیو رسانه</h3>
+          <p>محتوای چندرسانه‌ای و صوتی.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-heading">
+      <h2>بخش تصاویر شخصیت‌های انقلاب</h2>
+      <p>جایگاه تصاویر برای تکمیل هویت بصری پایگاه</p>
+    </div>
+
+    <div class="leaders-grid">
+      <div class="leader-box">
+        <div class="leader-placeholder">محل قرارگیری تصویر اول</div>
+        <h3>تصویر رهبر انقلاب</h3>
+      </div>
+
+      <div class="leader-box">
+        <div class="leader-placeholder">محل قرارگیری تصویر دوم</div>
+        <h3>تصویر رهبر انقلاب</h3>
+      </div>
+
+      <div class="leader-box">
+        <div class="leader-placeholder">محل قرارگیری تصویر سوم</div>
+        <h3>تصویر رهبر انقلاب</h3>
+      </div>
+    </div>
+
+    <div class="iran-flag" aria-label="پرچم ایران">
+      <div class="g"></div>
+      <div class="w">☼</div>
+      <div class="r"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-heading">
+      <h2>ارتباط با ما</h2>
+      <p>راه‌های ارتباطی و تماس با پایگاه رسمی</p>
+    </div>
+
+    <div class="contact-panel">
+      <h2>ارتباط با پایگاه رسمی</h2>
+      <p>
+        برای ارتباط، ارسال پیام و پیگیری مطالب،
+        اطلاعات تماس رسمی در این قسمت قرار خواهد گرفت.
+      </p>
+      <p>نشانی الکترونیکی: به‌زودی اعلام می‌شود</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="footer-main">
+      <div>
+        <h3>سید مهدی رضا موسوی</h3>
+        <p>
+          پایگاه رسمی اطلاع‌رسانی، انتشار اخبار،
+          دیدگاه‌ها، آثار و فعالیت‌های فرهنگی و جهادی.
+        </p>
+      </div>
+
+      <div>
+        <h3>دسترسی سریع</h3>
+        <a href="#about">زندگی‌نامه</a>
+        <a href="#works">تألیفات و آثار</a>
+        <a href="#news">اخبار و مطالب</a>
+        <a href="#media">گالری رسانه</a>
+      </div>
+
+      <div>
+        <h3>بخش‌های پایگاه</h3>
+        <a href="#speeches">سخنرانی‌ها</a>
+        <a href="#salehoon">قرارگاه صالحون</a>
+        <a href="#contact">ارتباط با ما</a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      تمامی حقوق این پایگاه متعلق به سید مهدی رضا موسوی است.
+      <br>
+      © ۱۴۰۵
+    </div>
+
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const mobilePanel = document.getElementById("mobilePanel");
+const searchToggle = document.getElementById("searchToggle");
+const searchBox = document.getElementById("searchBox");
+const siteSearch = document.getElementById("siteSearch");
+
+menuToggle.addEventListener("click", () => {
+  mobilePanel.classList.toggle("open");
+});
+
+mobilePanel.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    mobilePanel.classList.remove("open");
+  });
+});
+
+searchToggle.addEventListener("click", () => {
+  searchBox.classList.toggle("active");
+  if (searchBox.classList.contains("active")) {
+    siteSearch.focus();
+  }
+});
+
+siteSearch.addEventListener("input", () => {
+  const query = siteSearch.value.trim().toLocaleLowerCase("fa");
+  const sections = document.querySelectorAll("main section");
+
+  sections.forEach(section => {
+    const text = section.innerText.toLocaleLowerCase("fa");
+    section.style.display =
+      !query || text.includes(query) ? "" : "none";
+  });
+});
+</script>
 
 </body>
 </html>
