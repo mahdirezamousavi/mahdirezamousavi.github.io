@@ -16,13 +16,12 @@
 :root {
   --blue: #123d65;
   --dark: #092b49;
-  --red: #c63843;
-  --green: #168451;
+  --blue-light: #eaf1f7;
   --text: #263746;
   --muted: #74818d;
   --line: #e6ebef;
   --bg: #f3f5f7;
-  --white: #fff;
+  --white: #ffffff;
 }
 
 * {
@@ -51,24 +50,12 @@ button, input {
   font-family: inherit;
 }
 
-/* نوار سه رنگ */
-
-.top-strip {
-  height: 5px;
-  background: linear-gradient(
-    to left,
-    var(--green) 0 33.33%,
-    white 33.33% 66.66%,
-    var(--red) 66.66% 100%
-  );
-}
-
 /* بنر اصلی */
 
 .hero-banner {
   width: 100%;
   overflow: hidden;
-  background: #123d65;
+  background: var(--blue);
   line-height: 0;
 }
 
@@ -85,7 +72,7 @@ button, input {
 /* سربرگ */
 
 .header {
-  background: white;
+  background: var(--white);
   border-bottom: 1px solid var(--line);
 }
 
@@ -184,12 +171,13 @@ button, input {
 }
 
 .search-area button {
-  background: var(--red);
+  background: #ffffff;
   border: 0;
-  color: white;
+  color: var(--blue);
   padding: 8px 12px;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: 700;
 }
 
 /* اطلاعیه */
@@ -210,7 +198,7 @@ button, input {
 }
 
 .announcement-label {
-  background: var(--red);
+  background: var(--blue);
   color: white;
   padding: 3px 10px;
   border-radius: 3px;
@@ -229,7 +217,7 @@ button, input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-right: 4px solid var(--red);
+  border-right: 4px solid var(--blue);
   padding-right: 12px;
   margin-bottom: 18px;
 }
@@ -271,7 +259,7 @@ button, input {
 
 .category {
   display: inline-block;
-  background: #edf3f8;
+  background: var(--blue-light);
   color: var(--blue);
   padding: 4px 10px;
   font-size: 11px;
@@ -294,7 +282,7 @@ button, input {
 .read-more {
   display: inline-block;
   margin-top: 15px;
-  color: var(--red);
+  color: var(--blue);
   font-size: 12px;
   font-weight: 700;
 }
@@ -318,6 +306,7 @@ button, input {
 .news-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0,0,0,.06);
+  border-color: #c7d8e7;
 }
 
 .news-card h3 {
@@ -366,6 +355,10 @@ button, input {
   padding: 10px 0;
   font-size: 12px;
   color: #4e5c68;
+}
+
+.sidebar-link:hover {
+  color: var(--blue);
 }
 
 .sidebar-link:last-child {
@@ -502,6 +495,10 @@ button, input {
   margin: 6px 0;
 }
 
+.footer a:hover {
+  color: white;
+}
+
 .copyright {
   text-align: center;
   border-top: 1px solid rgba(255,255,255,.13);
@@ -634,11 +631,9 @@ button, input {
 
 <body>
 
-<div class="top-strip"></div>
-
 <!-- بنر اصلی -->
 <div class="hero-banner" id="home">
-  <img src="تصاویر/header.png"
+  <img src="images/header.png"
        alt="بنر اصلی پایگاه اطلاع‌رسانی سید مهدی رضا موسوی">
 </div>
 
@@ -757,7 +752,7 @@ button, input {
 
           <article class="organization-card searchable" id="hami">
 
-            <img src="تصاویر/hami.png"
+            <img src="images/hami.png"
                  alt="نشان گروه جهادی حامی">
 
             <h3>گروه جهادی حامی</h3>
@@ -773,7 +768,7 @@ button, input {
 
           <article class="organization-card searchable" id="salehoon">
 
-            <img src="تصاویر/salehoon.jpg"
+            <img src="images/salehoon.jpg"
                  alt="نشان قرارگاه صالحون">
 
             <h3>قرارگاه فرهنگی جهادی صالحون</h3>
@@ -798,7 +793,7 @@ button, input {
 
         <article class="book-card searchable">
 
-          <img src="تصاویر/sarf-yar.png"
+          <img src="images/sarf-yar.png"
                alt="کتاب صرف‌یار">
 
           <div>
@@ -1000,4 +995,5 @@ document.getElementById("searchForm").addEventListener("submit", function(e) {
 </script>
 
 </body>
-</html>
+        </html>
+        
