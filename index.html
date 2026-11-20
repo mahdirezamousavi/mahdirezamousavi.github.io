@@ -1,14 +1,4 @@
-<!-- تصویر بنر بالای سایت -->
-<img src="header.png" alt="بنر اصلی سایت">
 
-<!-- لوگوی گروه جهادی حامی -->
-<img src="hami.png" alt="گروه جهادی حامی">
-
-<!-- لوگوی قرارگاه صالحون -->
-<img src="salehoon.jpg" alt="قرارگاه صالحون">
-
-<!-- تصویر صرف‌یار -->
-<img src="sarf-yar.png" alt="صرف‌یار">
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -41,9 +31,7 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: "Vazirmatn", Tahoma, sans-serif;
@@ -57,23 +45,15 @@ a {
   color: inherit;
 }
 
-button, input {
-  font-family: inherit;
-}
-
-/* نوار بالایی */
+button, input { font-family: inherit; }
 
 .top-strip {
   height: 5px;
-  background: linear-gradient(
-    to left,
+  background: linear-gradient(to left,
     var(--green) 0 33.33%,
     white 33.33% 66.66%,
-    var(--red) 66.66% 100%
-  );
+    var(--red) 66.66% 100%);
 }
-
-/* بنر اصلی */
 
 .hero-banner {
   width: 100%;
@@ -91,8 +71,6 @@ button, input {
   object-fit: cover;
   object-position: center;
 }
-
-/* سربرگ */
 
 .header {
   background: white;
@@ -125,8 +103,6 @@ button, input {
   color: var(--muted);
   font-size: 12px;
 }
-
-/* منوی اصلی */
 
 .navbar {
   background: var(--blue);
@@ -189,9 +165,7 @@ button, input {
   font-size: 11px;
 }
 
-.search-area input::placeholder {
-  color: #e0e9f1;
-}
+.search-area input::placeholder { color: #e0e9f1; }
 
 .search-area button {
   background: var(--red);
@@ -201,8 +175,6 @@ button, input {
   border-radius: 4px;
   cursor: pointer;
 }
-
-/* نوار اطلاع رسانی */
 
 .announcement {
   background: white;
@@ -226,8 +198,6 @@ button, input {
   border-radius: 3px;
   white-space: nowrap;
 }
-
-/* محتوای اصلی */
 
 .container {
   max-width: 1250px;
@@ -262,9 +232,7 @@ button, input {
   align-items: start;
 }
 
-.content-section {
-  margin-bottom: 32px;
-}
+.content-section { margin-bottom: 32px; }
 
 .featured {
   background: white;
@@ -273,9 +241,7 @@ button, input {
   overflow: hidden;
 }
 
-.featured-content {
-  padding: 24px;
-}
+.featured-content { padding: 24px; }
 
 .category {
   display: inline-block;
@@ -306,8 +272,6 @@ button, input {
   font-size: 12px;
   font-weight: 700;
 }
-
-/* کارت ها */
 
 .news-grid {
   display: grid;
@@ -346,8 +310,6 @@ button, input {
   margin-top: 12px;
 }
 
-/* ستون کناری */
-
 .sidebar-box {
   background: white;
   border: 1px solid var(--line);
@@ -364,9 +326,7 @@ button, input {
   font-weight: 700;
 }
 
-.sidebar-body {
-  padding: 16px;
-}
+.sidebar-body { padding: 16px; }
 
 .sidebar-link {
   display: block;
@@ -376,11 +336,7 @@ button, input {
   color: #4e5c68;
 }
 
-.sidebar-link:last-child {
-  border-bottom: 0;
-}
-
-/* معرفی مجموعه ها */
+.sidebar-link:last-child { border-bottom: 0; }
 
 .organization-grid {
   display: grid;
@@ -415,8 +371,6 @@ button, input {
   text-align: justify;
 }
 
-/* کتاب */
-
 .book-card {
   display: flex;
   align-items: center;
@@ -443,8 +397,6 @@ button, input {
   color: var(--muted);
 }
 
-/* زندگی نامه */
-
 .about-box {
   background: white;
   border: 1px solid var(--line);
@@ -463,8 +415,6 @@ button, input {
   font-size: 13px;
 }
 
-/* ارتباط */
-
 .contact-box {
   background: white;
   padding: 22px;
@@ -476,8 +426,6 @@ button, input {
   font-size: 13px;
   color: var(--muted);
 }
-
-/* پاورقی */
 
 .footer {
   background: var(--dark);
@@ -517,12 +465,8 @@ button, input {
   color: #bdcbd8;
 }
 
-/* موبایل */
-
 @media(max-width: 850px) {
-  .main-grid {
-    grid-template-columns: 1fr;
-  }
+  .main-grid { grid-template-columns: 1fr; }
 
   .sidebar {
     display: grid;
@@ -530,9 +474,7 @@ button, input {
     gap: 12px;
   }
 
-  .footer-inner {
-    grid-template-columns: 1fr 1fr;
-  }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
 }
 
 @media(max-width: 600px) {
@@ -542,17 +484,9 @@ button, input {
     object-fit: cover;
   }
 
-  .header-inner {
-    padding: 12px 15px;
-  }
-
-  .brand-title {
-    font-size: 17px;
-  }
-
-  .header-date {
-    display: none;
-  }
+  .header-inner { padding: 12px 15px; }
+  .brand-title { font-size: 17px; }
+  .header-date { display: none; }
 
   .nav-inner {
     display: block;
@@ -566,9 +500,7 @@ button, input {
     min-height: 48px;
   }
 
-  .mobile-toggle {
-    display: block;
-  }
+  .mobile-toggle { display: block; }
 
   .menu {
     display: none;
@@ -577,57 +509,35 @@ button, input {
     padding-bottom: 10px;
   }
 
-  .menu.open {
-    display: flex;
-  }
+  .menu.open { display: flex; }
 
   .menu a {
     padding: 9px 12px;
     border-top: 1px solid rgba(255,255,255,.1);
   }
 
-  .search-area {
-    padding: 8px 0 13px;
-  }
+  .search-area { padding: 8px 0 13px; }
+  .search-area input { width: 100%; }
 
-  .search-area input {
-    width: 100%;
-  }
-
-  .announcement-inner {
-    font-size: 10px;
-  }
+  .announcement-inner { font-size: 10px; }
 
   .container {
     margin: 20px auto;
     padding: 0 13px;
   }
 
-  .news-grid,
-  .organization-grid {
-    grid-template-columns: 1fr;
-  }
+  .news-grid, .organization-grid { grid-template-columns: 1fr; }
 
-  .featured-content {
-    padding: 17px;
-  }
-
-  .featured h2 {
-    font-size: 17px;
-  }
-
-  .sidebar {
-    grid-template-columns: 1fr;
-  }
+  .featured-content { padding: 17px; }
+  .featured h2 { font-size: 17px; }
+  .sidebar { grid-template-columns: 1fr; }
 
   .book-card {
     flex-direction: column;
     text-align: center;
   }
 
-  .book-card img {
-    width: 145px;
-  }
+  .book-card img { width: 145px; }
 
   .footer-inner {
     grid-template-columns: 1fr;
@@ -641,9 +551,9 @@ button, input {
 
 <div class="top-strip"></div>
 
-<!-- بنر اصلی؛ تصویر اصلی کاربر -->
+<!-- بنر اصلی -->
 <div class="hero-banner" id="home">
-  <img src="تصاویر/header.png"
+  <img src="header.png"
        alt="بنر اصلی پایگاه اطلاع‌رسانی سید مهدی رضا موسوی">
 </div>
 
@@ -691,9 +601,7 @@ button, input {
 </div>
 
 <main class="container">
-
   <div class="main-grid">
-
     <div class="main-content">
 
       <section class="content-section" id="news">
@@ -715,7 +623,6 @@ button, input {
         </article>
 
         <div class="news-grid" style="margin-top:15px">
-
           <article class="news-card searchable">
             <h3>اخبار و گزارش‌های فرهنگی</h3>
             <p>گزارش برنامه‌ها، نشست‌ها و فعالیت‌های فرهنگی و اجتماعی.</p>
@@ -739,7 +646,6 @@ button, input {
             <p>انتشار سخنرانی‌ها، مطالب و دیدگاه‌های تأییدشده.</p>
             <span class="news-date">بخش سخنرانی‌ها</span>
           </article>
-
         </div>
       </section>
 
@@ -749,9 +655,8 @@ button, input {
         </div>
 
         <div class="organization-grid">
-
           <article class="organization-card searchable" id="hami">
-            <img src="تصاویر/hami.png" alt="نشان گروه جهادی حامی">
+            <img src="hami.png" alt="نشان گروه جهادی حامی">
             <h3>گروه جهادی حامی</h3>
             <p>
               گروهی تخصصی و وابسته به سازمان بسیج مهندسین، با تمرکز بر
@@ -762,7 +667,7 @@ button, input {
           </article>
 
           <article class="organization-card searchable" id="salehoon">
-            <img src="تصاویر/salehoon.jpg" alt="نشان قرارگاه صالحون">
+            <img src="salehoon.jpg" alt="نشان قرارگاه صالحون">
             <h3>قرارگاه فرهنگی جهادی صالحون</h3>
             <p>
               مجموعه‌ای فرهنگی و جهادی با هدف توسعه و گسترش فعالیت‌های
@@ -770,7 +675,6 @@ button, input {
               و مسئولانه در عرصه‌های مختلف.
             </p>
           </article>
-
         </div>
       </section>
 
@@ -780,7 +684,7 @@ button, input {
         </div>
 
         <article class="book-card searchable">
-          <img src="تصاویر/sarf-yar.png" alt="کتاب صرف‌یار">
+          <img src="sarf-yar.png" alt="کتاب صرف‌یار">
           <div>
             <h3>کتاب صرف‌یار</h3>
             <p>
@@ -842,7 +746,6 @@ button, input {
     </div>
 
     <aside class="sidebar">
-
       <div class="sidebar-box">
         <div class="sidebar-title">دسترسی سریع</div>
         <div class="sidebar-body">
@@ -873,15 +776,12 @@ button, input {
           </p>
         </div>
       </div>
-
     </aside>
-
   </div>
 </main>
 
 <footer class="footer">
   <div class="footer-inner">
-
     <div>
       <h3>پایگاه اطلاع‌رسانی سید مهدی رضا موسوی</h3>
       <p>
@@ -904,7 +804,6 @@ button, input {
       <a href="#salehoon">قرارگاه صالحون</a>
       <a href="#sarfyar">کتاب صرف‌یار</a>
     </div>
-
   </div>
 
   <div class="copyright">
@@ -940,5 +839,4 @@ document.getElementById("searchForm").addEventListener("submit", function(e) {
 </script>
 
 </body>
-  </html>
-  
+</html>
