@@ -16,8 +16,7 @@
 :root {
   --blue:#123d65;
   --dark:#092b49;
-  --red:#c63843;
-  --green:#168451;
+  --blue-light:#eaf2f9;
   --text:#263746;
   --muted:#74818d;
   --line:#e6ebef;
@@ -47,12 +46,11 @@ a {
 
 button,input { font-family:inherit; }
 
+/* نوار بالای سایت */
+
 .top-strip {
   height:5px;
-  background:linear-gradient(to left,
-    var(--green) 0 33.33%,
-    white 33.33% 66.66%,
-    var(--red) 66.66% 100%);
+  background:var(--blue);
 }
 
 /* بنر اصلی */
@@ -60,7 +58,7 @@ button,input { font-family:inherit; }
 .hero-banner {
   width:100%;
   overflow:hidden;
-  background:#123d65;
+  background:var(--blue);
   line-height:0;
 }
 
@@ -72,40 +70,6 @@ button,input { font-family:inherit; }
   min-height:130px;
   object-fit:cover;
   object-position:center;
-}
-
-/* سربرگ */
-
-.header {
-  background:white;
-  border-bottom:1px solid var(--line);
-}
-
-.header-inner {
-  max-width:1250px;
-  margin:auto;
-  padding:18px 22px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-}
-
-.brand-title {
-  color:var(--blue);
-  font-size:23px;
-  font-weight:800;
-}
-
-.brand-subtitle {
-  color:var(--muted);
-  font-size:12px;
-  margin-top:3px;
-}
-
-.header-date {
-  color:var(--muted);
-  font-size:12px;
 }
 
 /* منوی اصلی */
@@ -142,7 +106,7 @@ button,input { font-family:inherit; }
 }
 
 .menu a:hover {
-  background:rgba(255,255,255,.13);
+  background:rgba(255,255,255,.15);
 }
 
 .mobile-bar { display:none; }
@@ -177,12 +141,13 @@ button,input { font-family:inherit; }
 .search-area input::placeholder { color:#e0e9f1; }
 
 .search-area button {
-  background:var(--red);
+  background:#ffffff;
   border:0;
-  color:white;
+  color:var(--blue);
   padding:8px 12px;
   border-radius:4px;
   cursor:pointer;
+  font-weight:700;
 }
 
 /* اطلاعیه */
@@ -203,7 +168,7 @@ button,input { font-family:inherit; }
 }
 
 .announcement-label {
-  background:var(--red);
+  background:var(--blue);
   color:white;
   padding:3px 10px;
   border-radius:3px;
@@ -222,7 +187,7 @@ button,input { font-family:inherit; }
   display:flex;
   align-items:center;
   justify-content:space-between;
-  border-right:4px solid var(--red);
+  border-right:4px solid var(--blue);
   padding-right:12px;
   margin-bottom:18px;
 }
@@ -272,6 +237,7 @@ button,input { font-family:inherit; }
 }
 
 .news-card-image {
+  display:block;
   width:100%;
   aspect-ratio:16/9;
   overflow:hidden;
@@ -300,7 +266,7 @@ button,input { font-family:inherit; }
 .news-source {
   display:inline-block;
   align-self:flex-start;
-  background:#edf3f8;
+  background:var(--blue-light);
   color:var(--blue);
   font-size:10px;
   padding:3px 9px;
@@ -329,12 +295,12 @@ button,input { font-family:inherit; }
 
 .read-more {
   display:inline-block;
-  color:var(--red);
+  color:var(--blue);
   font-size:12px;
   font-weight:700;
 }
 
-.read-more:hover { color:var(--blue); }
+.read-more:hover { color:#3978ad; }
 
 /* خبرهای متنی بدون تصویر */
 
@@ -503,7 +469,7 @@ button,input { font-family:inherit; }
 
 .sidebar-link:last-child { border-bottom:0; }
 
-.sidebar-link:hover { color:var(--red); }
+.sidebar-link:hover { color:var(--blue); }
 
 /* پابرگ */
 
@@ -569,10 +535,6 @@ button,input { font-family:inherit; }
     max-height:190px;
     object-fit:cover;
   }
-
-  .header-inner { padding:12px 15px; }
-  .brand-title { font-size:17px; }
-  .header-date { display:none; }
 
   .nav-inner {
     display:block;
@@ -645,21 +607,11 @@ button,input { font-family:inherit; }
 
 <!-- بنر اصلی -->
 <div class="hero-banner" id="home">
-  <img src="header.png"
+  <img src="images/header.png"
        alt="بنر اصلی پایگاه اطلاع‌رسانی سید مهدی رضا موسوی">
 </div>
 
-<header class="header">
-  <div class="header-inner">
-    <div>
-      <div class="brand-title">سید مهدی رضا موسوی</div>
-      <div class="brand-subtitle">پایگاه رسمی اطلاع‌رسانی، اخبار و فعالیت‌ها</div>
-    </div>
-    <div class="header-date">پایگاه اطلاع‌رسانی رسمی</div>
-  </div>
-</header>
-
-<!-- منوی اصلی -->
+<!-- منوی اصلی؛ مستقیماً پس از بنر -->
 <nav class="navbar">
   <div class="nav-inner">
 
@@ -712,7 +664,6 @@ button,input { font-family:inherit; }
     <a href="#news">آرشیو اخبار ←</a>
   </div>
 
-  <!-- چهار خبر تصویری اصلی -->
   <div class="news-grid">
 
     <!-- خبر شماره ۱ -->
@@ -918,7 +869,8 @@ button,input { font-family:inherit; }
 
     <article class="organization-card searchable" id="hami">
 
-      <img src="hami.png" alt="نشان گروه جهادی حامی" loading="lazy">
+      <img src="images/hami.png"
+           alt="نشان گروه جهادی حامی" loading="lazy">
 
       <h3>گروه جهادی حامی</h3>
 
@@ -933,7 +885,8 @@ button,input { font-family:inherit; }
 
     <article class="organization-card searchable" id="salehoon">
 
-      <img src="salehoon.jpg" alt="نشان قرارگاه صالحون" loading="lazy">
+      <img src="images/salehoon.jpg"
+           alt="نشان قرارگاه صالحون" loading="lazy">
 
       <h3>قرارگاه فرهنگی جهادی صالحون</h3>
 
@@ -957,7 +910,8 @@ button,input { font-family:inherit; }
 
   <article class="book-card searchable">
 
-    <img src="sarf-yar.png" alt="کتاب صرف‌یار" loading="lazy">
+    <img src="images/sarf-yar.png"
+         alt="کتاب صرف‌یار" loading="lazy">
 
     <div>
       <h3>کتاب صرف‌یار</h3>
